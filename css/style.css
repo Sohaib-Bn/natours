@@ -269,10 +269,16 @@ body {
 .form__input:focus:invalid ~ .form__user-line::before {
   width: 90%;
   background-color: #ff7730; }
+  @media only screen and (max-width: 56.25em) {
+    .form__input:focus:invalid ~ .form__user-line::before {
+      width: 100%; } }
 
 .form__input:focus ~ .form__user-line::before {
   width: 90%;
   background-color: #55c57a; }
+  @media only screen and (max-width: 56.25em) {
+    .form__input:focus ~ .form__user-line::before {
+      width: 100%; } }
 
 .form__radio {
   display: inline-block;
@@ -525,7 +531,7 @@ body {
         transform: translate(0%, 0%);
         width: 100%;
         text-align: center;
-        padding: 5rem; }
+        padding: 6rem; }
         .card__price-box {
           text-align: center;
           color: #fff;

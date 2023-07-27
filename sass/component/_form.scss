@@ -67,11 +67,17 @@
 
   &__input:focus:invalid ~ &__user-line::before {
     width: 90%;
+    @include respond(tab-port) {
+      width: 100%;
+    }
     background-color: $color-secondary-dark;
   }
 
   &__input:focus ~ &__user-line::before {
     width: 90%;
+    @include respond(tab-port) {
+      width: 100%;
+    }
     background-color: $color-primary;
   }
 
