@@ -1,0 +1,81 @@
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+
+  @include respond(tab-land) {
+    padding: 3rem;
+    margin: 0 auto;
+  }
+
+  @include respond(tab-port) {
+    max-width: 75rem;
+    padding: 0 3.5rem;
+  }
+
+  @include respond(phone) {
+    max-width: 55rem;
+    padding: 0 3.5rem;
+  }
+
+
+
+  &:not(:last-child) {
+    margin-bottom: $grid-gap-vertical;
+
+    @include respond(tab-port) {
+      margin-bottom: $grid-gap-vertical-small;
+    }
+  
+  }
+
+  @include clearFix ;
+
+  [class^="col-"] {
+
+     float: left;  
+     
+     @include respond(tab-port) {
+      width: 100% !important;
+      float: none;
+      margin-bottom: 7rem;
+    }
+
+     
+     &:not(:last-child) {
+        margin-right: $grid-gap-horzintal;
+
+        @include respond(tab-land) {
+          margin-right: $grid-gap-horzintal-small;
+        }
+
+        @include respond(tab-port) {
+          margin-right: 0;
+        }
+      }
+  } 
+
+  .col-1-of-2 {
+    width: calc((100% - #{$grid-gap-horzintal}) / 2);
+
+       @include respond(tab-land) {
+        width: calc((100% - #{$grid-gap-horzintal-small}) / 2);
+    }
+  }
+
+  .col-1-of-4 {
+    width: calc((100% - 3 * (#{$grid-gap-horzintal})) / 4);
+
+    @include respond(tab-land) {
+      width: calc((100% - 3 * (#{$grid-gap-horzintal-small})) / 4);
+    }
+  }
+
+  .col-1-of-3 {
+    width: calc((100% - 2 * (#{$grid-gap-horzintal})) / 3);
+
+    @include respond(tab-land) {
+      width: calc((100% - 2 * (#{$grid-gap-horzintal-small})) / 3);
+  }
+  }
+
+}

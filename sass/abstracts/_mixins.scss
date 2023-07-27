@@ -1,0 +1,63 @@
+@mixin clearFix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// MEDIA QUERIE MANAGER
+
+/* 
+0-600px : phone
+600-900px : tablet portrait
+900-1280px :tablet tablet land
+(1280-1800px) : where norml styles apply
+> 1800px : big desktop
+*/
+
+@mixin respond($screen) {
+    @if $screen == phone {
+        @media only screen and (max-width: 37.5em) { // 1em = 16px --> 600px = ?
+            @content;
+        }
+    }
+
+    @if $screen == tab-port {
+        @media only screen and (max-width: 56.25em) { // 1em = 16px --> 900px = ?
+            @content;
+        }
+    }
+
+    
+    @if $screen == tab-only {
+        @media only screen and (min-width: 37.55em) and (max-width: 56.25em) { // 1em = 16px --> 900px = ?
+            @content;
+        }
+    }
+
+    @if $screen == tab-land {
+        @media only screen and (max-width: 80em) { // 1em = 16px --> 1200px = ?
+            @content;
+        }
+    }
+
+    @if $screen == big-desktop {
+        @media only screen and (min-width: 112.5em) { // 1em = 16px --> 1800px = ?
+            @content;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
