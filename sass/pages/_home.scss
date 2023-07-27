@@ -22,7 +22,7 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url(/img/nat-4.jpg);
+    url(../img/nat-4.jpg);
   background-size: cover;
 
   transform: skewY(-7deg);
@@ -81,7 +81,7 @@
       rgba($color-white, 0.9) 50%,
       transparent 50%
     ),
-    url(/img/nat-10.jpg);
+    url(../img/nat-10.jpg);
   background-size: cover;
 
   @include respond(tab-land) {
@@ -91,7 +91,7 @@
       rgba($color-white, 0.9) 65%,
       transparent 65%
     ),
-    url(/img/nat-10.jpg);
+    url(../img/nat-10.jpg);
   }
 
   @include respond(tab-port) {
@@ -101,7 +101,7 @@
       rgba($color-white, 0.9) 100%,
       transparent 100%
     ),
-    url(/img/nat-10.jpg);
+    url(../img/nat-10.jpg);
   }
 
 
